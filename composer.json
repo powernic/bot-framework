@@ -11,7 +11,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Powernic\\Bot\\Framework": "src/Framework/"
+      "Powernic\\Bot\\Framework\\": "src/Framework/"
     }
   },
   "require": {
