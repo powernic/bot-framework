@@ -153,7 +153,7 @@ abstract class CallbackHandler extends RouteHandler implements AvailableRouteInt
         }
         /** @var AsCallbackHandler $attribute */
         $attribute = $attributes[0]->newInstance();
-        if (empty($attribute->children)) {
+        if (empty($attribute->parent)) {
             return [];
         }
         return [...$this->createBackButton(), ...$this->createCancelButton()];
