@@ -1,0 +1,21 @@
+{
+  "name": "powernic/tg-bot-bundle",
+  "description": "My awesome Symfony bundle",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Powernic",
+      "email": "powernic1@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Powernic\\Bot\\Framework": "src/Framework/"
+    }
+  },
+  "require": {
+    "php": ">=8.1",
+    "symfony/framework-bundle": "^7.3"
+  }
+}
