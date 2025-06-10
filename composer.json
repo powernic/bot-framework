@@ -16,6 +16,7 @@
   },
   "require": {
     "php": ">=8.1",
+    "telegram-bot/api": "^2.5",
     "symfony/framework-bundle": "^7.3"
   }
 }
