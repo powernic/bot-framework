@@ -22,7 +22,7 @@ return static function (ContainerConfigurator $container) {
     $container->services()
         ->set(Client::class, EnhancedClient::class)
             ->public()
-            ->arg('$token', '%env(TOKEN)%')
+            ->arg('$token', '%env(TELEGRAM_TOKEN)%')
         ->set('handler_resolver.callback', CallbackHandlerResolver::class)
         ->args(
             [
@@ -79,6 +79,6 @@ return static function (ContainerConfigurator $container) {
             ->args([service(RouterGenerator::class)])
         ->set(BotApi::class, EnhancedBot::class)
             ->public()
-            ->arg('$token', '%env(TOKEN)%')
+            ->arg('$token', '%env(TELEGRAM_TOKEN)%')
             ->autowire();
 };
