@@ -72,7 +72,7 @@ abstract class Handler implements HandlerInterface
 
     public function getUserId(): string
     {
-        return (string) $this->message->getFrom()->getId();
+        return (string)$this->message->getChat()->getId();
     }
 
     protected function getButtons(): array
