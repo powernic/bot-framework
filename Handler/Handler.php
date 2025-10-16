@@ -101,7 +101,7 @@ abstract class Handler implements HandlerInterface
         $this->bot->sendMessage(
             chatId: $chatId,
             text: $message,
-            parseMode: $markdown ? 'markdown' : null,
+            parseMode: $markdown ? 'markdown' : 'HTML',
             disablePreview: false,
             replyToMessageId: $reply ? $messageId : null,
             replyMarkup: new InlineKeyboardMarkup($buttons)
