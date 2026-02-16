@@ -29,9 +29,13 @@ class ButtonFactory
         ?Style $style = null): array
     {
         $route = $this->router->generate($handler, $options, $useContext, $page);
-        if ($isRow) {
-            return [['text' => $text, 'callback_data' => $route]];
+        $button = ['text' => $text, 'callback_data' => $route];
+        if ($style) {
+            $button['style'] = $style->value;
         }
-        return ['text' => $text, 'callback_data' => $route];
+        if ($isRow) {
+            return [$button];
+        }
+        return $button;
     }
 }
