@@ -25,7 +25,8 @@ class ButtonFactory
         array $options = [],
         bool $isRow = true,
         bool $useContext = true,
-        ?int $page = null): array
+        ?int $page = null,
+        ?Style $style = null): array
     {
         $route = $this->router->generate($handler, $options, $useContext, $page);
         if ($isRow) {

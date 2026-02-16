@@ -3,6 +3,7 @@
 namespace Powernic\Bot\Framework\Handler;
 
 use Powernic\Bot\Framework\Chat\Button\ButtonFactory;
+use Powernic\Bot\Framework\Chat\Button\Style;
 use Powernic\Bot\Framework\Handler\Callback\CallbackHandler;
 use Powernic\Bot\Framework\Handler\Event\BeforeHandleEvent;
 use Psr\Log\LoggerInterface;
@@ -157,7 +158,8 @@ abstract class Handler implements HandlerInterface
         array $options = [],
         bool $isRow = true,
         bool $useContext = true,
-        ?int $page = null): array
+        ?int $page = null,
+        ?Style $style = null): array
     {
         return $this->buttonFactory->create(
             $text,
@@ -165,7 +167,8 @@ abstract class Handler implements HandlerInterface
             $options,
             $isRow,
             $useContext,
-            $page
+            $page,
+            $style
         );
     }
 }
